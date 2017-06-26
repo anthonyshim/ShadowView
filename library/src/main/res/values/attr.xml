@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShadowView">
+        <attr name="textString" format="reference|string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="textBackground" format="reference|color" />
+        <attr name="margin" format="dimension" />
+        <attr name="shadowBackground" format="reference|color" />
+        <attr name="isFlatMode" format="boolean" />
+    </declare-styleable>
+</resources>

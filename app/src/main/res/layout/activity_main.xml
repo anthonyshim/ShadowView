@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="imjmo.shadowview.example.MainActivity">
+
+    <imjmo.shadowview.ShadowView
+        android:id="@+id/shadowview_down"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="25dp"
+        app:isFlatMode="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/shadowview_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:margin="4dp"
+        app:shadowBackground="#ff0099cc"
+        app:textBackground="#ff33b5e5"
+        app:textColor="#ffffff"
+        app:textSize="18sp"
+        app:textString="Down" />
+
+    <imjmo.shadowview.ShadowView
+        android:id="@+id/shadowview_flat"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/shadowview_down"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:margin="@dimen/button_shadow_margin"
+        app:shadowBackground="@drawable/shape_rounded_25dp_shadow"
+        app:textBackground="@drawable/selector_rounded_25dp"
+        app:textColor="@android:color/white"
+        app:textSize="@dimen/button_text_size"
+        app:textString="@string/button_text_flat" />
+
+</android.support.constraint.ConstraintLayout>
