@@ -70,7 +70,11 @@ public class ShadowView extends ConstraintLayout {
 
         Drawable textBackgroundDrawable = typedArray.getDrawable(R.styleable.ShadowView_textBackground);
         if (null != textBackgroundDrawable) {
-            mBinding.text.setBackground(textBackgroundDrawable);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                mBinding.text.setBackground(textBackgroundDrawable);
+            } else {
+                mBinding.text.setBackgroundDrawable(textBackgroundDrawable);
+            }
         }
 
         mMargin = Math.round(typedArray.getDimension(R.styleable.ShadowView_margin, INVALID_VALUE));
@@ -81,7 +85,11 @@ public class ShadowView extends ConstraintLayout {
 
         Drawable shadowBackgroundDrawable = typedArray.getDrawable(R.styleable.ShadowView_shadowBackground);
         if (null != shadowBackgroundDrawable) {
-            mBinding.viewShadow.setBackground(shadowBackgroundDrawable);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                mBinding.viewShadow.setBackground(shadowBackgroundDrawable);
+            } else {
+                mBinding.viewShadow.setBackgroundDrawable(shadowBackgroundDrawable);
+            }
         }
 
         mIsFlatMode = typedArray.getBoolean(R.styleable.ShadowView_isFlatMode, true);
