@@ -60,7 +60,7 @@ public class ShadowView extends ConstraintLayout {
 
         int textSize = Math.round(typedArray.getDimension(R.styleable.ShadowView_textSize, INVALID_VALUE));
         if (INVALID_VALUE != textSize) {
-            mBinding.text.setTextSize(textSize);
+            mBinding.text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         }
 
         ColorStateList textColor = typedArray.getColorStateList(R.styleable.ShadowView_textColor);
